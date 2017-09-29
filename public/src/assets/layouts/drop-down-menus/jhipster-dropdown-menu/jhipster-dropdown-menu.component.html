@@ -1,0 +1,52 @@
+<p>
+  jhipster-dropdown-menu works!
+</p>
+
+<button class="hamburger-toggle-button">
+  <span>toggle menu</span>
+</button>
+<ul id="hamburger-dropdown-menu1">
+    <li (click)="openPopupOne()">One</li>
+    <li (click)="openPopupTwo()">Two</li>
+    <li (click)="openPopupThree()">Three</li>
+</ul>
+
+<br/>
+<hr>
+<br/>
+
+<span class="hamburger-container">
+    <button class="hamburger-toggle-button hamburger-toggle-button--htx">
+        <span>toggle menu</span>
+    </button>
+    <ul id="hamburger-dropdown-menu">
+        <li (click)="openPopupOne()">In persönlichen Postkorb verschieben</li>
+        <li (click)="openPopupTwo()">Vorgang in Postkorb verschieben</li>
+        <li (click)="openPopupThree()">Vorgang zu Benutzer verschieben</li>
+    </ul>
+</span>
+
+<br/>
+<hr>
+<br/>
+
+<li ngbDropdown class="nav-item dropdown pointer">
+  <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
+    <span>
+      <span class="icon-user" aria-hidden="true"></span>
+      <span > Account</span>
+      <b class="caret"></b>
+    </span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+
+    <li>
+      <a class="dropdown-item"
+         routerLinkActive="active" (click)="collapseNavbar()">
+        <span class="icon-settings" aria-hidden="true"></span>
+        <span >Password</span>
+      </a>
+    </li>
+
+  </ul>
+</li>

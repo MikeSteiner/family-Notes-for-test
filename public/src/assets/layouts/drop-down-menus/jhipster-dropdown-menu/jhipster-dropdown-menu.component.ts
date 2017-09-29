@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-jhipster-dropdown-menu',
@@ -8,8 +7,6 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['jhipster-dropdown-menu.component.css']
 })
 export class JhipsterDropdownMenuComponent implements OnInit {
-
-  modalRef: NgbModalRef;
 
   constructor() { }
 

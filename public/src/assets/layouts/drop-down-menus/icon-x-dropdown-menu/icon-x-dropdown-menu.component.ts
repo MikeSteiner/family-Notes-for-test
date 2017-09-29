@@ -1,11 +1,13 @@
 import {Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
-  selector: 'app-actions-dropdown-menu',
-  templateUrl: 'actions-dropdown-menu.component.html',
-  styleUrls: ['actions-dropdown-menu.component.css']
+  selector: 'app-threelines2x-dropdown-menu',
+  templateUrl: 'icon-x-dropdown-menu.component.html',
+  styleUrls: [
+    'icon-x-dropdown-menu.component.css'
+  ]
 })
-export class ActionsDropdownMenuComponent implements OnInit {
+export class IconXDropdownMenuComponent implements OnInit {
 
   @HostListener('window:click', ['$event']) dropDownClickListener($event) {
     console.log($event);
@@ -39,8 +41,11 @@ export class ActionsDropdownMenuComponent implements OnInit {
   }
 
   public myFunction(evt: any) {
-    // document.getElementById("myDropdownMain").classList.toggle("show");
     document.getElementById("myDropdownMain").classList.toggle("show");
+  }
+
+  public toggleClassChangeBars(element: any) {
+    element.classList.toggle("change");
   }
 
 }

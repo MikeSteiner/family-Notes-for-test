@@ -1,0 +1,16 @@
+
+
+.navbar-toggle {
+  border: none;
+  background: transparent;
+}
+
+.navbar-toggle:hover {
+   background: transparent;
+ }
+
+.icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+}
+

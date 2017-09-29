@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+// import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
@@ -13,7 +14,8 @@ import { ApplicationLoanApproveComponent } from './application-loan-approve/appl
 import { DashboardDataComponent } from './dashboard-data/dashboard-data.component';
 import { JhipsterDropdownMenuComponent } from '../assets/layouts/drop-down-menus/jhipster-dropdown-menu/jhipster-dropdown-menu.component';
 import { W3schoolDropdownMenuComponent } from '../assets/layouts/drop-down-menus/w3school-dropdown-menu/w3school-dropdown-menu.component';
-import { ActionsDropdownMenuComponent } from '../assets/layouts/drop-down-menus/actions-dropdown-menu/actions-dropdown-menu.component';
+import { ThreeLinesToXDropdownMenuComponent } from '../assets/layouts/drop-down-menus/threelines-toX-dropdown-menu/threelines-toX-dropdown-menu.component';
+import { IconXDropdownMenuComponent } from '../assets/layouts/drop-down-menus/icon-x-dropdown-menu/icon-x-dropdown-menu.component';
 
 @NgModule({
   imports: [
@@ -23,6 +25,7 @@ import { ActionsDropdownMenuComponent } from '../assets/layouts/drop-down-menus/
     HomeModule,
     MyExperimentsModule,
     RouterModule.forRoot(appRoutes)
+    // NgbModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -31,9 +34,11 @@ import { ActionsDropdownMenuComponent } from '../assets/layouts/drop-down-menus/
     DashboardDataComponent,
     JhipsterDropdownMenuComponent,
     W3schoolDropdownMenuComponent,
-    ActionsDropdownMenuComponent
+    ThreeLinesToXDropdownMenuComponent,
+    IconXDropdownMenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

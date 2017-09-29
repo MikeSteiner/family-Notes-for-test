@@ -7,7 +7,8 @@ import { PropertyBindingComponent } from './my-experiments/property-binding';
 
 import { JhipsterDropdownMenuComponent } from '../assets/layouts/drop-down-menus/jhipster-dropdown-menu/jhipster-dropdown-menu.component';
 import { W3schoolDropdownMenuComponent } from "../assets/layouts/drop-down-menus/w3school-dropdown-menu/w3school-dropdown-menu.component";
-import { ActionsDropdownMenuComponent } from "../assets/layouts/drop-down-menus/actions-dropdown-menu/actions-dropdown-menu.component";
+import { ThreeLinesToXDropdownMenuComponent } from "../assets/layouts/drop-down-menus/threelines-toX-dropdown-menu/threelines-toX-dropdown-menu.component";
+import { IconXDropdownMenuComponent } from "../assets/layouts/drop-down-menus/icon-x-dropdown-menu/icon-x-dropdown-menu.component";
 
 
 export const appRoutes: Routes = [
@@ -19,6 +20,7 @@ export const appRoutes: Routes = [
 
   { path: 'dropdown-jhipster', component: JhipsterDropdownMenuComponent},
   { path: 'dropdown-w3school', component: W3schoolDropdownMenuComponent},
-  { path: 'dropdown-actions', component: ActionsDropdownMenuComponent}
+  { path: 'dropdown-threelines', component: ThreeLinesToXDropdownMenuComponent},
+  { path: 'dropdown-iconx', component: IconXDropdownMenuComponent}
 
 ];

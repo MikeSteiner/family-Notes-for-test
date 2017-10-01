@@ -9,43 +9,57 @@ export class ApplicationStatusComponent implements OnInit {
 
   public functionList: Array<any >;
   public functionsArgValuesList: Array<Array<any>>;
+  public linkNameList: Array<string>;
+
   public functionOpenPopupOneArgs: Array<any>;
   public functionOpenPopupTwoArgs: Array<any>;
   public functionOpenPopupThreeArgs: Array<any>;
-
-  public linkNameList: Array<string>;
+  public functionOpenPopupFourNoArgs: Array<any>;
 
   constructor() {
-    this.functionList = [this.openPopupOne, this.openPopupTwo, this.openPopupThree];
+    this.functionList = [this.openPopupOne, this.openPopupTwo, this.openPopupThree, this.openPopupFour];
     this.functionsArgValuesList = [];
 
-    this.functionOpenPopupOneArgs = [1, 2, 3];
-    this.functionOpenPopupTwoArgs = ['one', 'two', 'three'];
+    this.functionOpenPopupOneArgs = [1];
+    this.functionOpenPopupTwoArgs = ['one', 'two'];
     this.functionOpenPopupThreeArgs = [1, 'two', {}];
+    this.functionOpenPopupFourNoArgs = [];
     this.functionsArgValuesList.push(this.functionOpenPopupOneArgs);
     this.functionsArgValuesList.push(this.functionOpenPopupTwoArgs);
     this.functionsArgValuesList.push(this.functionOpenPopupThreeArgs);
+    this.functionsArgValuesList.push(this.functionOpenPopupFourNoArgs);
 
     this.linkNameList = [
-      'Link one with f1',
-      'Link two with f2',
-      'Link three with f3'
+      'link one call openPopupOne',
+      'link two call openPopupTwo',
+      'link three call openPopupThree',
+      'link three call openPopupFour'
     ]
   }
 
   ngOnInit() {
   }
 
-  public openPopupOne = function() {
-    alert('Home from app component');
+  public openPopupOne = function(arg1?: number) {
+    alert('openPopupOne from app component');
+    console.log(arg1);
   };
 
-  public openPopupTwo = function() {
-    alert('About  from app component');
+  public openPopupTwo = function(arg1?: string, arg2?: string) {
+    alert('openPopupTwo from app component');
+    console.log(arg1);
+    console.log(arg2);
   };
 
-  public openPopupThree = function() {
-    alert('Contracts  from app component');
+  public openPopupThree = function(arg1?: number, arg2?: string, arg3?: any) {
+    alert('openPopupThree from app component');
+    console.log(arg1);
+    console.log(arg2);
+    console.log(arg3);
+  };
+
+  public openPopupFour = function() {
+    alert('openPopupFour has no args from app component');
   };
 
 }

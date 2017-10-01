@@ -1,57 +1,151 @@
 .hamburger-container {
-  position: relative;
   display: inline-block;
+  position: relative;
+  font-size: 15px;
+  float: left;
 }
 
 .hamburger-toggle-button{
-  display: inline-block;
+  /*display: inline-block;*/
+  /*cursor: pointer;*/
+  /*z-index: 99;*/
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 0px;
+  font-size: 0;
+  text-indent: -9999px;
+  border: none;
   cursor: pointer;
-  z-index: 99;
+  transition: background 0.3s;
+  z-index: 20;
 }
-.bar-top, .bar-middle, .bar-bottom {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
+.hamburger-toggle-button:focus {
+  outline: none;
 }
-/* Rotate first bar */
-.cross .bar-top {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-  transform: rotate(-45deg) translate(-9px, 6px) ;
+.bar-all {
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 6px;
+  right: 6px;
+  height: 1px;
+  background: #b0b0b0;
+}
+.bar-top, .bar-bottom {
+  position: absolute;
+  display: block;
+  /*height: 1px;*/
+  background-color: #b0b0b0;
+  content: "";
 }
 
+.bar-top {
+  top: 8px;
+}
+/*.bar-middle {*/
+  /*!*top: 12px;*!*/
+  /*!*content: "";*!*/
+/*}*/
+.bar-bottom {
+  top: 16px;
+}
+
+
+/* Rotate first bar */
+.cross .bar-top {
+  /*-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;*/
+  /*transform: rotate(-45deg) translate(-9px, 6px) ;*/
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+  top: 12px;
+
+  transform: rotate(45deg);
+}
 /* Fade out the second bar */
 .cross .bar-middle {
   opacity: 0;
 }
-
 /* Rotate last bar */
 .cross .bar-bottom {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-  transform: rotate(45deg) translate(-8px, -8px) ;
+  /*-webkit-transform: rotate(45deg) translate(-8px, -8px) ;*/
+  /*transform: rotate(45deg) translate(-8px, -8px) ;*/
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+  top: 12px;
+  transform: rotate(-45deg);
 }
 
 /* Dropdown Content (Hidden by Default) */
 .hamburger-content {
   display: none;
+  /*position: absolute;*/
+  /*background-color: #f9f9f9;*/
+  /*min-width: 160px;*/
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  /*z-index: 1;*/
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 10;
+  background-color: #fff;
+  padding: 0;
+  color: #545454;
+  box-sizing: border-box;
+  /*right: -3px;*/
+  left: 3px;
+  top: 25px;
+  /*opacity: 1;*/
+  transition: all 0.2s ease;
+}
+.hamburger-content:before {
+  border-width: 5px;
+  border-bottom-color: #fff;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-style: solid;
+  width: 10px;
+  height: 10px;
+  display: block;
+  content: "";
+  top: -10px;
+  right: 10px;
+  position: absolute;
+}
+.hamburger-content li {
+  list-style: none;
+  padding: 5px 10px;
+  white-space: nowrap;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #eee;
+}
+
+.hamburger-content li:last-child {
+  border-bottom: 0 none;
+}
+
+.hamburger-content li:hover {
+  cursor: pointer;
+  color: #545454;
+  background-color: #eee;
 }
 /* Links inside the dropdown */
-.hamburger-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-/* Change color of dropdown links on hover */
-.hamburger-content a:hover {
-  background-color: #f1f1f1
-}
+/*.hamburger-content a {*/
+  /*color: black;*/
+  /*padding: 12px 16px;*/
+  /*text-decoration: none;*/
+  /*display: block;*/
+/*}*/
+/*!* Change color of dropdown links on hover *!*/
+/*.hamburger-content a:hover {*/
+  /*cursor: pointer;*/
+  /*color: #545454;*/
+  /*background-color: #eee;*/
+/*}*/
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
   display:block;

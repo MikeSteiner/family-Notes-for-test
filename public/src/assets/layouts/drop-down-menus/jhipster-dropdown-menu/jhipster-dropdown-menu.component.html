@@ -20,9 +20,9 @@
         <span>toggle menu</span>
     </button>
     <ul id="hamburger-dropdown-menu">
-        <li (click)="openPopupOne()">In persönlichen Postkorb verschieben</li>
-        <li (click)="openPopupTwo()">Vorgang in Postkorb verschieben</li>
-        <li (click)="openPopupThree()">Vorgang zu Benutzer verschieben</li>
+        <li (click)="openPopupOneForJh()">In persönlichen Postkorb verschieben</li>
+        <li (click)="openPopupTwoForJh()">Vorgang in Postkorb verschieben</li>
+        <li (click)="openPopupThreeForJh()">Vorgang zu Benutzer verschieben</li>
     </ul>
 </span>
 
@@ -50,3 +50,29 @@
 
   </ul>
 </li>
+
+<br/>
+<hr>
+<br/>
+
+<div class="row">
+  <div class="col-md-2">
+    asasa
+  </div>
+  <div class="cow-md-4">
+    <app-lines-to-x-updated-dropdown-menu
+      [functionList]="functionList"
+      [functionParameterList]="functionsArgValuesList"
+      [linkNameList]="linkNameList">
+    </app-lines-to-x-updated-dropdown-menu>
+    ..
+  </div>
+  <div class="cow-md-4">
+    <app-lines-to-x-updated-dropdown-menu
+      [functionList]="secondFunctionList"
+      [functionParameterList]="secondFunctionsArgValuesList"
+      [linkNameList]="secondLinkNameList">
+    </app-lines-to-x-updated-dropdown-menu>
+  </div>
+</div>
+

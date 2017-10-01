@@ -1,16 +1,16 @@
 <div class="hamburger-container">
   <button type="button" class="hamburger-toggle-button" (click)="onToggleButtonClick($event.target)">
-    <div class="bar-top"></div>
-    <div class="bar-middle"></div>
-    <div class="bar-bottom"></div>
+    <div class="bar-all bar-top"></div>
+    <div class="bar-all bar-middle"></div>
+    <div class="bar-all bar-bottom"></div>
   </button>
-  <div class="hamburger-content">
+  <!--<div class="hamburger-content">-->
+  <ul class="hamburger-content">
 
     <ng-container *ngFor="let function of functionList; let ix = index;">
-      <a (click)="function()">{{linkNameList[ix]}}</a>
+        <!--<a (click)="functionCallWrapper(function, functionParameterList[ix])">{{linkNameList[ix]}}</a>-->
+        <li (click)="functionCallWrapper(function, functionParameterList[ix])">{{linkNameList[ix]}}</li>
     </ng-container>
 
-    
-  </div>
+  </ul>
 </div>
-

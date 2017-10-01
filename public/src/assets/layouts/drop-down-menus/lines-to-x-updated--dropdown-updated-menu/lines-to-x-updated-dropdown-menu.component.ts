@@ -19,7 +19,7 @@ class HAMBURGER {
 })
 export class LinesToXDropDownMenuComponent implements OnInit {
   @Input() public functionList: Array<any>;
-  @Input() public functionParameterList: Array<Array<string>>;
+  @Input() public functionParameterList: Array<Array<any>>;
   @Input() public linkNameList: Array<string>;
 
   @HostListener('window:click', ['$event']) dropDownClickListener($event) {
@@ -27,16 +27,28 @@ export class LinesToXDropDownMenuComponent implements OnInit {
     this.onOutsideToggleButtonClick($event.target);
   }
 
+
   constructor() { }
 
   ngOnInit() {
     console.log(this.functionList);
-    //this.functionList[0]();
+    console.log(...this.functionParameterList[0]);
+    console.log(...this.functionParameterList[1]);
+    console.log(...this.functionParameterList[2]);
+
   }
 
-  // public openPopupOne() {
-  //   alert('Home');
-  // }
+  public functionCallWrapper(func: any, args?: Array<any>): void {
+    if(args === null) {
+      func();
+    } else {
+      func(...args);
+    }
+  }
+
+  public test(arg1, arg2, arg3) {
+    alert(arg1.toString());
+  }
   //
   // public openPopupTwo() {
   //   alert('About');

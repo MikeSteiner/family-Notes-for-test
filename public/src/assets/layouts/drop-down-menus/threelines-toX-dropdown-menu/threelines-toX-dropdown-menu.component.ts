@@ -82,7 +82,7 @@ export class ThreeLinesToXDropdownMenuComponent implements OnInit {
   }
 
 
-  public toggleContent(element: any) {
+  private toggleContent(element: any) {
     const hamburgerContainer = element.parentNode;
     const dropDownContents = hamburgerContainer.getElementsByClassName(HAMBURGER.CLASS_CONTENT);
     dropDownContents[0].classList.toggle(HAMBURGER.CLASS_CONTENT_SHOW);
@@ -101,7 +101,7 @@ export class ThreeLinesToXDropdownMenuComponent implements OnInit {
     this.toggleContent(element);
   }
 
-  public onOutsideToggleButtonClick(element: any) {
+  private onOutsideToggleButtonClick(element: any) {
     const isToggleButton = element.classList.contains(HAMBURGER.CLASS_TOGGLE_BUTTON);
     const isBarTop = element.classList.contains(HAMBURGER.CLASS_BAR_TOP);
     const isBarMiddle = element.classList.contains(HAMBURGER.CLASS_BAR_MIDDLE);
@@ -141,6 +141,7 @@ export class ThreeLinesToXDropdownMenuComponent implements OnInit {
       }
     }
   }
+
 
   private removeCrossClassByOutsideClick() {
     const toggleButtons = document.getElementsByClassName("hamburger-toggle-button");

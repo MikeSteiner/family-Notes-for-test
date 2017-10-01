@@ -9,10 +9,13 @@ import { JhipsterDropdownMenuComponent } from '../assets/layouts/drop-down-menus
 import { W3schoolDropdownMenuComponent } from "../assets/layouts/drop-down-menus/w3school-dropdown-menu/w3school-dropdown-menu.component";
 import { ThreeLinesToXDropdownMenuComponent } from "../assets/layouts/drop-down-menus/threelines-toX-dropdown-menu/threelines-toX-dropdown-menu.component";
 import { IconXDropdownMenuComponent } from "../assets/layouts/drop-down-menus/icon-x-dropdown-menu/icon-x-dropdown-menu.component";
+import { LinesToXDropDownMenuComponent } from "../assets/layouts/drop-down-menus/lines-to-x-updated--dropdown-updated-menu/lines-to-x-updated-dropdown-menu.component";
+import { ApplicationStatusComponent } from "./application-status/application-status.component";
 
 
 export const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
+  { path: 'application-status', component: ApplicationStatusComponent},
 
   { path: 'my-experiments', component: MyExperimentsComponent},
   { path: 'my-experiments/interpolation', component: InterpolationComponent},
@@ -21,6 +24,7 @@ export const appRoutes: Routes = [
   { path: 'dropdown-jhipster', component: JhipsterDropdownMenuComponent},
   { path: 'dropdown-w3school', component: W3schoolDropdownMenuComponent},
   { path: 'dropdown-threelines', component: ThreeLinesToXDropdownMenuComponent},
-  { path: 'dropdown-iconx', component: IconXDropdownMenuComponent}
+  { path: 'dropdown-iconx', component: IconXDropdownMenuComponent},
+  { path: 'dropdown-lines2x', component: LinesToXDropDownMenuComponent}
 
 ];

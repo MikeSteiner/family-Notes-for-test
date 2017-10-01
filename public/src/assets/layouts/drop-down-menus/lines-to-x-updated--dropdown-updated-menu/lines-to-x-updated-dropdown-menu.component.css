@@ -1,0 +1,58 @@
+.hamburger-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-toggle-button{
+  display: inline-block;
+  cursor: pointer;
+  z-index: 99;
+}
+.bar-top, .bar-middle, .bar-bottom {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+/* Rotate first bar */
+.cross .bar-top {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.cross .bar-middle {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.cross .bar-bottom {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.hamburger-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.hamburger-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.hamburger-content a:hover {
+  background-color: #f1f1f1
+}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display:block;
+}

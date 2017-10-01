@@ -12,10 +12,12 @@ import { MyExperimentsModule } from './my-experiments/my-experiments.module';
 import { ApplicationStatusComponent } from './application-status/application-status.component';
 import { ApplicationLoanApproveComponent } from './application-loan-approve/application-loan-approve.component';
 import { DashboardDataComponent } from './dashboard-data/dashboard-data.component';
+
 import { JhipsterDropdownMenuComponent } from '../assets/layouts/drop-down-menus/jhipster-dropdown-menu/jhipster-dropdown-menu.component';
 import { W3schoolDropdownMenuComponent } from '../assets/layouts/drop-down-menus/w3school-dropdown-menu/w3school-dropdown-menu.component';
 import { ThreeLinesToXDropdownMenuComponent } from '../assets/layouts/drop-down-menus/threelines-toX-dropdown-menu/threelines-toX-dropdown-menu.component';
 import { IconXDropdownMenuComponent } from '../assets/layouts/drop-down-menus/icon-x-dropdown-menu/icon-x-dropdown-menu.component';
+import { LinesToXDropDownMenuComponent } from "../assets/layouts/drop-down-menus/lines-to-x-updated--dropdown-updated-menu/lines-to-x-updated-dropdown-menu.component";
 
 @NgModule({
   imports: [
@@ -35,7 +37,8 @@ import { IconXDropdownMenuComponent } from '../assets/layouts/drop-down-menus/ic
     JhipsterDropdownMenuComponent,
     W3schoolDropdownMenuComponent,
     ThreeLinesToXDropdownMenuComponent,
-    IconXDropdownMenuComponent
+    IconXDropdownMenuComponent,
+    LinesToXDropDownMenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

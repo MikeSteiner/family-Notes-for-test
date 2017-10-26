@@ -10,15 +10,18 @@ import { W3schoolDropdownMenuComponent } from "../assets/layouts/drop-down-menus
 import { ThreeLinesToXDropdownMenuComponent } from "../assets/layouts/drop-down-menus/threelines-toX-dropdown-menu/threelines-toX-dropdown-menu.component";
 import { IconXDropdownMenuComponent } from "../assets/layouts/drop-down-menus/icon-x-dropdown-menu/icon-x-dropdown-menu.component";
 import { LinesToXDropDownMenuComponent } from "../assets/layouts/drop-down-menus/lines-to-x-updated--dropdown-updated-menu/lines-to-x-updated-dropdown-menu.component";
-import { ApplicationStatusComponent } from "./application-status/application-status.component";
+import { ApplicationStatusComponent } from "./application/application-status/application-status.component";
 
 import { NgDateTimePickerComponent } from "../assets/layouts/date-time-picker/ng-date-time-picker/ng-date-time-picker.component";
-import {PrimeNgCalenderComponent} from "../assets/layouts/date-time-picker/primeng-p-calender/primeng-calender.component";
+import { PrimeNgCalenderComponent } from "../assets/layouts/date-time-picker/primeng-p-calender/primeng-calender.component";
+import { ApplicationLoanApproveComponent } from "./application/application-loan-approve/application-loan-approve.component";
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
+
   { path: 'application-status', component: ApplicationStatusComponent},
+  { path: 'application-approve', component: ApplicationLoanApproveComponent},
 
   { path: 'my-experiments', component: MyExperimentsComponent},
   { path: 'my-experiments/interpolation', component: InterpolationComponent},

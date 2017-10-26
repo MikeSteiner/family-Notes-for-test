@@ -1,8 +1,19 @@
 <div class="navigation-container ">
-  <nav class="navbar navbar-inverse navbar-fixed-top navbar-collapse">
+  <nav class="navbar navbar-inverse">
     <ul class="list-inline">
       <li class="list-inline-item">
         <a class="btn btn-primary" routerLink="home" routerLinkActive="true">Home</a>
+      </li>
+      <li class="list-inline-item">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="fieldApplicationsId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Applications
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item btn btn-primary" routerLink="application-status" routerLinkActive="true">Status</a>
+            <a class="dropdown-item btn btn-primary" routerLink="application-approve" routerLinkActive="true">Loan Approve</a>
+          </div>
+        </div>
       </li>
       <li class="list-inline-item">
         <div class="dropdown">
@@ -30,14 +41,6 @@
           </div>
         </div>
       </li>
-
-
-
-
-
-
-
     </ul>
   </nav>
-
 </div>

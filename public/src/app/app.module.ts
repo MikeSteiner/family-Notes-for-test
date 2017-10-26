@@ -14,8 +14,8 @@ import { HomeModule } from './home/home.module';
 import { RouterModule} from '@angular/router';
 import { appRoutes} from "./app.routes";
 import { MyExperimentsModule } from './my-experiments/my-experiments.module';
-import { ApplicationStatusComponent } from './application-status/application-status.component';
-import { ApplicationLoanApproveComponent } from './application-loan-approve/application-loan-approve.component';
+import { ApplicationStatusComponent } from './application/application-status/application-status.component';
+import { ApplicationLoanApproveComponent } from './application/application-loan-approve/application-loan-approve.component';
 import { DashboardDataComponent } from './dashboard-data/dashboard-data.component';
 
 import { JhipsterDropdownMenuComponent } from '../assets/layouts/drop-down-menus/jhipster-dropdown-menu/jhipster-dropdown-menu.component';

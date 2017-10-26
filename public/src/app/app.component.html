@@ -1,5 +1,11 @@
-<h1>
+<h1 class="text-center bg-info text-white">
   {{title}}
 </h1>
 
-<router-outlet></router-outlet>
+<app-navigation></app-navigation>
+
+<div class="container">
+  <div class="row border">
+    <router-outlet></router-outlet>
+  </div>
+</div>

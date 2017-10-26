@@ -12,8 +12,11 @@ import { IconXDropdownMenuComponent } from "../assets/layouts/drop-down-menus/ic
 import { LinesToXDropDownMenuComponent } from "../assets/layouts/drop-down-menus/lines-to-x-updated--dropdown-updated-menu/lines-to-x-updated-dropdown-menu.component";
 import { ApplicationStatusComponent } from "./application-status/application-status.component";
 
+import { NgDateTimePickerComponent } from "../assets/layouts/date-time-picker/ng-date-time-picker/ng-date-time-picker.component";
+import {PrimeNgCalenderComponent} from "../assets/layouts/date-time-picker/primeng-p-calender/primeng-calender.component";
 
 export const appRoutes: Routes = [
+  { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
   { path: 'application-status', component: ApplicationStatusComponent},
 
@@ -25,6 +28,8 @@ export const appRoutes: Routes = [
   { path: 'dropdown-w3school', component: W3schoolDropdownMenuComponent},
   { path: 'dropdown-threelines', component: ThreeLinesToXDropdownMenuComponent},
   { path: 'dropdown-iconx', component: IconXDropdownMenuComponent},
-  { path: 'dropdown-lines2x', component: LinesToXDropDownMenuComponent}
+  { path: 'dropdown-lines2x', component: LinesToXDropDownMenuComponent},
 
+  { path: 'ng-datetime-picker', component: NgDateTimePickerComponent},
+  { path: 'primeng-calender', component: PrimeNgCalenderComponent}
 ];

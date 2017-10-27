@@ -18,6 +18,8 @@ import { ApplicationStatusComponent } from './application/application-status/app
 import { ApplicationLoanApproveComponent } from './application/application-loan-approve/application-loan-approve.component';
 import { DashboardDataComponent } from './dashboard-data/dashboard-data.component';
 
+import {DataTableModule, SharedModule} from 'primeng/primeng';
+
 import { ApplicationService } from './services/application.service';
 
 import { JhipsterDropdownMenuComponent } from '../assets/layouts/drop-down-menus/jhipster-dropdown-menu/jhipster-dropdown-menu.component';
@@ -40,7 +42,9 @@ import { ApplicationDatatableComponent } from './primeng/application-datatable/a
     MyExperimentsModule,
     RouterModule.forRoot(appRoutes),
     DateTimePickerModule,
-    CalendarModule
+    CalendarModule,
+    DataTableModule,
+    SharedModule
     // NgbModule.forRoot()
   ],
   declarations: [
@@ -61,7 +65,8 @@ import { ApplicationDatatableComponent } from './primeng/application-datatable/a
   providers: [
     ApplicationService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: []
 })
 export class AppModule {
 }

@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Response } from '@angular/http';
+import {Component, OnInit} from '@angular/core';
+import {Response} from '@angular/http';
+
+// import {DataTableModule, SharedModule} from 'primeng/primeng';
 
 import {ApplicationService} from "../../services/application.service";
+import {Application} from "../../entities/application/application.model";
 
 @Component({
   selector: 'app-application-datatable',
@@ -10,7 +13,8 @@ import {ApplicationService} from "../../services/application.service";
 })
 export class ApplicationDatatableComponent implements OnInit {
 
-  public applications: any;
+  public applications: Array<Application>;
+  public first: number = 0;
 
   constructor(
     private applicationService: ApplicationService
@@ -26,13 +30,19 @@ export class ApplicationDatatableComponent implements OnInit {
   }
 
   private onSuccess_getAllApplication(result: Response) {
-    this.applications = result;
+    const data: any = result;
+    this.applications = data;
+
     console.log(this.applications);
 
     alert('All applications get successfully');
   }
   private onError_getAllApplication(response: Response) {
     alert('Error getting all applications')
+  }
+
+  reset() {
+    this.first = 0;
   }
 
 }

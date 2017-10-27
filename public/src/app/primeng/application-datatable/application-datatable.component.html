@@ -1,4 +1,18 @@
 <p>
   application-datatable works!
 </p>
-<img src="../../../assets/images/gallery.png"/>
+
+<p-dataTable [value]="applications" [rows]="3" [paginator]="true" [(first)]="first">
+  <p-column field="id" header="Id" [sortable]="true"></p-column>
+  <p-column field="customerId" header="customerId" [sortable]="true"></p-column>
+  <p-column field="basketId" header="basketId"></p-column>
+  <p-column field="createdBy" header="createdBy"></p-column>
+  <p-column field="createdOn" header="createdOn"></p-column>
+  <p-column field="lockedBy" header="lockedBy"></p-column>
+  <p-column field="lockedOn" header="lockedOn"></p-column>
+  <p-column field="readOnly" header="readOnly"></p-column>
+</p-dataTable>
+
+<br />
+
+<button type="button" class="btn btn-primary" (click)="reset()" label="Reset">Reset</button>

@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Response} from '@angular/http';
 
-// import {DataTableModule, SharedModule} from 'primeng/primeng';
-
 import {ApplicationService} from "../../services/application.service";
 import {Application} from "../../entities/application/application.model";
 import {LazyLoadEvent} from "primeng/components/common/lazyloadevent";
@@ -49,7 +47,6 @@ export class ApplicationDatatableComponent implements OnInit {
   reset() {
     this.first = 0;
   }
-
 
   onPageSelect(ev) {
     alert('First: ' + ev.first);

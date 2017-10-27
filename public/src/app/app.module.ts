@@ -18,6 +18,8 @@ import { ApplicationStatusComponent } from './application/application-status/app
 import { ApplicationLoanApproveComponent } from './application/application-loan-approve/application-loan-approve.component';
 import { DashboardDataComponent } from './dashboard-data/dashboard-data.component';
 
+import { ApplicationService } from './services/application.service';
+
 import { JhipsterDropdownMenuComponent } from '../assets/layouts/drop-down-menus/jhipster-dropdown-menu/jhipster-dropdown-menu.component';
 import { W3schoolDropdownMenuComponent } from '../assets/layouts/drop-down-menus/w3school-dropdown-menu/w3school-dropdown-menu.component';
 import { ThreeLinesToXDropdownMenuComponent } from '../assets/layouts/drop-down-menus/threelines-toX-dropdown-menu/threelines-toX-dropdown-menu.component';
@@ -26,6 +28,7 @@ import { LinesToXDropDownMenuComponent } from "../assets/layouts/drop-down-menus
 import { NgDateTimePickerComponent } from '../assets/layouts/date-time-picker/ng-date-time-picker/ng-date-time-picker.component';
 import { PrimeNgCalenderComponent } from '../assets/layouts/date-time-picker/primeng-p-calender/primeng-calender.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ApplicationDatatableComponent } from './primeng/application-datatable/application-datatable.component';
 
 @NgModule({
   imports: [
@@ -52,9 +55,12 @@ import { NavigationComponent } from './navigation/navigation.component';
     LinesToXDropDownMenuComponent,
     NgDateTimePickerComponent,
     PrimeNgCalenderComponent,
-    NavigationComponent
+    NavigationComponent,
+    ApplicationDatatableComponent
   ],
-  providers: [],
+  providers: [
+    ApplicationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

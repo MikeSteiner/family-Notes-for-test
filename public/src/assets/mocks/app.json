@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Ward",
+    "info": "Ward is a professional swimmer."
+  },
+  {
+    "id": 2,
+    "name": "Kevin",
+    "info": "Kevin starts smoking again after 5 years."
+  },
+  {
+    "id": 3,
+    "name": "John",
+    "info": "John Stones has retired from football."
+  },
+  {
+    "id": 4,
+    "name": "Scott",
+    "info": "Scott has not been to Scotland yet."
+  },
+  {
+    "id": 5,
+    "name": "Sam",
+    "info": "Sam crashed on a remote island with his boat."
+  }
+]

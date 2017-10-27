@@ -6,7 +6,7 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
-//import {} from '../mocks/applicationMocks.js'
+import {} from '../../assets/mocks/applicationMocks.json'
 
 @Injectable()
 export class ApplicationService {
@@ -17,7 +17,7 @@ export class ApplicationService {
   }
 
   getAllApplication(): Observable<Response> {
-    return this.http.get('../mocks/applicationMocks.js').map((res: Response) => res.json());
+    return this.http.get('../../assets/mocks/applicationMocks.json').map((res: Response) => res.json());
   }
 
 }

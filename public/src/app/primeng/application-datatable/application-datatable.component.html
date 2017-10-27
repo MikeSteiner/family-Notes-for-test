@@ -2,7 +2,10 @@
   application-datatable works!
 </p>
 
-<p-dataTable [value]="applications" [rows]="3" [paginator]="true" [(first)]="first">
+<p-dataTable [value]="applications" [scrollable]="true" [lazy]="true" [paginator]="true"
+             [rows]="itemsPerPage"
+             [totalRecords]="totalItems"
+             (onLazyLoad)="loadData($event)">
   <p-column field="id" header="Id" [sortable]="true"></p-column>
   <p-column field="customerId" header="customerId" [sortable]="true"></p-column>
   <p-column field="basketId" header="basketId"></p-column>

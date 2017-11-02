@@ -18,7 +18,7 @@ import { ApplicationStatusComponent } from './application/application-status/app
 import { ApplicationLoanApproveComponent } from './application/application-loan-approve/application-loan-approve.component';
 import { DashboardDataComponent } from './dashboard-data/dashboard-data.component';
 
-import {DataTableModule, SharedModule} from 'primeng/primeng';
+import {DataTableModule, SharedModule, AccordionModule } from 'primeng/primeng';
 
 import { ApplicationService } from './services/application.service';
 
@@ -44,7 +44,8 @@ import { ApplicationDatatableComponent } from './primeng/application-datatable/a
     DateTimePickerModule,
     CalendarModule,
     DataTableModule,
-    SharedModule
+    SharedModule,
+    AccordionModule
     // NgbModule.forRoot()
   ],
   declarations: [

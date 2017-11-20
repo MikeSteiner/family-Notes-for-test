@@ -17,10 +17,15 @@
     </p-accordion></div>
 </div>
 
-<p-dataTable [value]="applications" [scrollable]="true" [lazy]="true" [paginator]="true"
+<p-dataTable [value]="applications"
+             [scrollable]="true"
+             [lazy]="true"
+             [paginator]="true"
              [rows]="itemsPerPage"
              [totalRecords]="totalItems"
-             (onLazyLoad)="loadData($event)">
+             reorderableColumns="true"
+             (onLazyLoad)="loadData($event)"
+             (onColReorder)="onColReorder($event)">
   <p-column field="id" header="Id" [sortable]="true"></p-column>
   <p-column field="customerId" header="customerId" [sortable]="true" [filter]="true" filterPlaceholder="Search"></p-column>
   <p-column field="basketId" header="basketId" [filter]="true" filterPlaceholder="Search"></p-column>

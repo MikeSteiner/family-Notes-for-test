@@ -52,6 +52,10 @@ export class ApplicationDatatableComponent implements OnInit {
     alert('First: ' + ev.first);
   }
 
+  onColReorder(ev) {
+    console.log(ev);
+  }
+
   loadData(event: LazyLoadEvent) {
     //in a real application, make a remote request to load data using state metadata from event
     //event.first = First row offset

@@ -73,7 +73,7 @@ export class ApplicationDatatableComponent implements OnInit {
   }
 
   onRowClick(ev) {
-
+    console.log(ev);
   }
 
 }

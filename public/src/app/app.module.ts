@@ -31,6 +31,7 @@ import { NgDateTimePickerComponent } from '../assets/layouts/date-time-picker/ng
 import { PrimeNgCalenderComponent } from '../assets/layouts/date-time-picker/primeng-p-calender/primeng-calender.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ApplicationDatatableComponent } from './primeng/application-datatable/application-datatable.component';
+import { SidebarToggleMenuComponent } from './menus/sidebar-toggle-menu/sidebar-toggle-menu.component';
 
 @NgModule({
   imports: [
@@ -61,7 +62,8 @@ import { ApplicationDatatableComponent } from './primeng/application-datatable/a
     NgDateTimePickerComponent,
     PrimeNgCalenderComponent,
     NavigationComponent,
-    ApplicationDatatableComponent
+    ApplicationDatatableComponent,
+    SidebarToggleMenuComponent
   ],
   providers: [
     ApplicationService

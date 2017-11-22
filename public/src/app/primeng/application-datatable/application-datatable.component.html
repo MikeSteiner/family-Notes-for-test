@@ -1,4 +1,5 @@
 <p>
+
   application-datatable works!
 </p>
 
@@ -24,17 +25,43 @@
              [rows]="itemsPerPage"
              [totalRecords]="totalItems"
              reorderableColumns="true"
+             [editable]="true"
              (onLazyLoad)="loadData($event)"
-             (onColReorder)="onColReorder($event)">
+             (onColReorder)="onColReorder($event)"
+              (onRowClick)="onRowClick($event)">
   <p-column field="id" header="Id" [sortable]="true"></p-column>
-  <p-column field="customerId" header="customerId" [sortable]="true" [filter]="true" filterPlaceholder="Search"></p-column>
-  <p-column field="basketId" header="basketId" [filter]="true" filterPlaceholder="Search"></p-column>
+  <p-column field="customerId" header="customerId" [sortable]="true" [filter]="true" filterPlaceholder="Search">
+    <ng-template let-col let-app="rowData" let-i="rowIndex" pTemplate="body">
+      <span>row index {{i}}</span>
+    </ng-template>
+  </p-column>
+  <p-column field="basketId" header="basketId" [filter]="true" filterPlaceholder="Search" [editable]="false">
+    <ng-template let-col let-app="rowData" let-i="rowIndex" [pTemplate]="body">
+      <ng-container *ngIf="app.isEditable">
+        <input type="text" [(ngModel)]="app.basketId" />
+      </ng-container>
+      <ng-container *ngIf="!app.isEditable">
+        {{ app[col.field] }}
+      </ng-container>
+    </ng-template>
+  </p-column>
   <p-column field="createdBy" header="createdBy"></p-column>
   <p-column field="createdOn" header="createdOn"></p-column>
-  <p-column field="lockedBy" header="lockedBy"></p-column>
+  <p-column field="lockedBy" header="lockedBy" [editable]="true">
+    <ng-template let-col let-app="rowData" pTemplate="editor">
+      <ng-container *ngIf="app.isEditable">
+        <input type="text" [(ngModel)]="app[col.field]" appendTo="body" />
+       </ng-container>
+      <ng-container *ngIf="!app.isEditable">
+        <span style="margin-left: 7px">{{ app[col.field] }}</span>
+      </ng-container>
+    </ng-template>
+  </p-column>
   <p-column field="lockedOn" header="lockedOn"></p-column>
   <p-column field="readOnly" header="readOnly"></p-column>
+  <p-column field="isEditable" header="Editable"></p-column>
 </p-dataTable>
+
 
 <br />
 

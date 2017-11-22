@@ -17,6 +17,8 @@ import { PrimeNgCalenderComponent } from "../assets/layouts/date-time-picker/pri
 import { ApplicationLoanApproveComponent } from "./application/application-loan-approve/application-loan-approve.component";
 import { ApplicationDatatableComponent } from "./primeng/application-datatable/application-datatable.component";
 
+import { SidebarToggleMenuComponent } from "./menus/sidebar-toggle-menu/sidebar-toggle-menu.component";
+
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
@@ -36,6 +38,7 @@ export const appRoutes: Routes = [
 
   { path: 'ng-datetime-picker', component: NgDateTimePickerComponent},
   { path: 'primeng-calender', component: PrimeNgCalenderComponent},
+  { path: 'primeng-datatable', component: ApplicationDatatableComponent},
 
-  { path: 'primeng-datatable', component: ApplicationDatatableComponent}
+  { path: 'sidebar-toggle-menu', component: SidebarToggleMenuComponent}
 ];

@@ -17,7 +17,8 @@
     "lockedOn" : "2017-10-26T15:59:44.71+03:00",
     "processDuration" : 34414,
     "title" : "Application 1",
-    "readOnly" : null
+    "readOnly" : null,
+    "isEditable": true
   }, {
     "id" : "application_13",
     "customerId" : "001",
@@ -36,7 +37,8 @@
     "lockedOn" : "2017-10-20T16:03:38.04+03:00",
     "processDuration" : 54288,
     "title" : "My favorite test",
-    "readOnly" : null
+    "readOnly" : null,
+    "isEditable": false
   }, {
     "id" : "application_2",
     "customerId" : "002",
@@ -55,7 +57,8 @@
     "lockedOn" : "2017-10-20T16:14:35.353+03:00",
     "processDuration" : 1736,
     "title" : null,
-    "readOnly" : null
+    "readOnly" : null,
+    "isEditable": false
   }, {
     "id" : "application_4",
     "customerId" : "002",
@@ -74,7 +77,8 @@
     "lockedOn" : null,
     "processDuration" : 229,
     "title" : null,
-    "readOnly" : null
+    "readOnly" : null,
+    "isEditable": true
   }, {
     "id" : "application_5",
     "customerId" : "002",
@@ -93,6 +97,7 @@
     "lockedOn" : null,
     "processDuration" : 245,
     "title" : null,
-    "readOnly" : null
+    "readOnly" : null,
+    "isEditable": true
   }
 ]

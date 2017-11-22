@@ -72,4 +72,8 @@ export class ApplicationDatatableComponent implements OnInit {
     }, 250);
   }
 
+  onRowClick(ev) {
+
+  }
+
 }
